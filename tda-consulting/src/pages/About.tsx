@@ -30,7 +30,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <Navigation />
-      
+
       {/* Header */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center space-y-6">
@@ -50,20 +50,19 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Founded with a vision to bridge the gap between cutting-edge AI technology and practical
-                business applications, we've grown to become one of Australia's most trusted AI consulting firms,
-                helping businesses transform through intelligent automation.
+                Technology Development and Automation (TDA) specialises in delivering cutting-edge AI and automation services to businesses of all sizes. 
+                From advanced workflow automation and intelligent data processing to custom enterprise solutions, we empower organisations to modernise their operations 
+                and scale their digital capabilities in the ever-evolving digital world.
               </p>
               <p>
-                Our team of experienced data scientists, ML engineers, and business consultants brings together
-                deep technical expertise and real-world business acumen. We understand that successful AI
-                implementation isn't just about the technology—it's about understanding your business, your
-                challenges, and your goals.
+                At TDA, we pride ourselves on providing tailored solutions that meet the unique needs of each client. Our team of experts ensures seamless integration, 
+                enhanced productivity, and long-term success for your business by eliminating costly human errors and wasted staff hours. 
+                We don't just implement technology; we focus on real-world outcomes that deliver clear, quantifiable value for your business.
               </p>
               <p>
-                With a proven track record across industries including finance, healthcare, retail, real estate,
-                and professional services, we've helped Australian businesses unlock the transformative power of AI.
-                From initial strategy to full-scale implementation, we're with you every step of the way.
+                Whether you’re looking to streamline your internal admin, secure your data, or scale your operations across multiple departments, we’re here to make it happen. 
+                As part of a global network focused on technology and automation, we bring a wealth of experience, innovation, and a strong commitment to excellence to every 
+                business we partner with. TDA is committed to helping you thrive and achieve your growth ambitions.
               </p>
             </div>
           </Card>
@@ -82,7 +81,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-card border-border"
               >
@@ -106,23 +105,22 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 opacity-90">Industries</h3>
                 <ul className="space-y-2 opacity-90">
-                  <li>• Financial Services</li>
-                  <li>• Healthcare & Life Sciences</li>
-                  <li>• Retail & E-commerce</li>
-                  <li>• Manufacturing</li>
-                  <li>• Professional Services</li>
-                  <li>• Technology</li>
+                  <li>• Real Estate & Property Management</li>
+                  <li>• Financial Services & Lending</li>
+                  <li>• Legal & Professional Services</li>
+                  <li>• Healthcare Administration</li>
+                  <li>• Logistics & Supply Chain</li>
+                  <li>• Technology & SaaS Operations</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4 opacity-90">Technologies</h3>
                 <ul className="space-y-2 opacity-90">
-                  <li>• Machine Learning & Deep Learning</li>
-                  <li>• Natural Language Processing</li>
-                  <li>• Computer Vision</li>
+                  <li>• AI Document Processing</li>
+                  <li>• Autonomous Workflow Orchestration</li>
+                  <li>• Intelligent Data Classification</li>
                   <li>• Predictive Analytics</li>
-                  <li>• Robotic Process Automation</li>
-                  <li>• Cloud AI Services</li>
+                  <li>• Generative AI for Operations</li>
                 </ul>
               </div>
             </div>

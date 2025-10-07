@@ -5,15 +5,12 @@ import Footer from "@/components/Footer";
 import { NavLink } from "react-router-dom";
 import { 
   ArrowRight, 
-  Brain, 
-  Database, 
+  Brain,
   Workflow, 
-  Bot, 
-  LineChart, 
-  Shield,
-  Lightbulb,
-  Cpu,
-  Settings
+  Bot,
+  Globe,
+  Settings,
+  Code
 } from "lucide-react";
 
 const Services = () => {
@@ -21,100 +18,67 @@ const Services = () => {
     {
       icon: Brain,
       title: "AI Strategy & Consulting",
-      description: "Develop a comprehensive AI roadmap aligned with your business objectives. We help you identify opportunities, assess readiness, and create actionable implementation plans.",
+      description: "We start with a disciplined audit to understand your current administrative costs. This ensures your AI investment is directly aligned with business goals and delivers guaranteed financial ROI.",
       features: [
-        "AI readiness assessment",
-        "Strategic roadmap development",
-        "Technology stack selection",
-        "ROI analysis and planning"
-      ]
-    },
-    {
-      icon: Cpu,
-      title: "Machine Learning Solutions",
-      description: "Custom ML models designed to solve your unique business challenges. From predictive analytics to natural language processing.",
-      features: [
-        "Custom model development",
-        "Predictive analytics",
-        "Natural language processing",
-        "Computer vision solutions"
-      ]
-    },
-    {
-      icon: Database,
-      title: "Data Analytics & Insights",
-      description: "Transform raw data into actionable insights. Advanced analytics, data visualization, and business intelligence solutions.",
-      features: [
-        "Data pipeline development",
-        "Advanced analytics",
-        "Interactive dashboards",
-        "Real-time reporting"
+        "Fixed-Price Automation Audit", // Emphasize the entry point
+        "Roadmap development (3/6/12 month)",
+        "Identify high-cost, high-volume workflows",
+        "ROI analysis and financial planning"
       ]
     },
     {
       icon: Workflow,
-      title: "Process Automation",
-      description: "Streamline operations with intelligent automation. Reduce manual work, minimize errors, and boost productivity.",
+      title: "AI Process Automation",
+      description: "Implement AI agents that eliminate manual, repetitive work like data entry, invoice processing, and report generation. We turn staff time spent clicking into recoverable dollars.",
       features: [
-        "Workflow automation",
-        "Document processing",
-        "RPA implementation",
-        "Integration services"
+        "AI Document Processing (NLP)", // Covers data extraction
+        "Intelligent workflow orchestration (Make/Zapier)",
+        "Automated data syncing across systems (CRM/ERP)",
+        "Reduce human errors and compliance risk"
       ]
     },
     {
       icon: Bot,
-      title: "Conversational AI",
-      description: "Deploy intelligent chatbots and virtual assistants to enhance customer service and internal operations.",
+      title: "Conversational AI & Customer Service",
+      description: "Deploy advanced AI assistants to manage customer interactions, handle internal requests, and act as a 24/7 AI receptionist using voice-to-text technology.",
       features: [
-        "Chatbot development",
-        "Virtual assistants",
-        "Voice interfaces",
-        "Multi-channel support"
+        "AI Customer Service Triage & Resolution",
+        "Custom Chatbots and Virtual Assistants",
+        "Voice-to-Text AI Receptionist and Intake", // Addresses your specific goal
+        "Multi-channel support integration"
       ]
     },
     {
-      icon: LineChart,
-      title: "Predictive Analytics",
-      description: "Forecast trends, identify risks, and make data-driven decisions with advanced predictive models.",
+      icon: Globe,
+      title: "Website Solutions & Digital Presence",
+      description: "We design and rebuild modern, scalable websites that act as a strong digital front door for your business, ready for seamless AI integration and future growth.",
       features: [
-        "Demand forecasting",
-        "Risk assessment",
-        "Customer behaviour prediction",
-        "Market trend analysis"
+        "Website design and rebuild (UX/UI)",
+        "Mobile-first, responsive development",
+        "CRM and marketing tool integration",
+        "Optimisation for lead generation"
       ]
     },
     {
-      icon: Shield,
-      title: "AI Governance & Ethics",
-      description: "Ensure responsible AI deployment with proper governance frameworks and ethical guidelines.",
+      icon: Code, // New icon for development focus
+      title: "Custom Application Development",
+      description: "Build custom web portals, internal mobile apps, and dedicated data dashboards that provide simple, centralized access points for your team or customers.",
       features: [
-        "Policy development",
-        "Bias detection and mitigation",
-        "Compliance assurance",
-        "Risk management"
-      ]
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation Workshops",
-      description: "Hands-on workshops to educate your team and identify AI opportunities within your organisation.",
-      features: [
-        "Team training",
-        "Ideation sessions",
-        "Proof of concept development",
-        "Change management"
+        "Mobile application development (iOS/Android)",
+        "Internal functional web portals",
+        "Custom data dashboards and reporting tools",
+        "Scalable back-end infrastructure design"
       ]
     },
     {
       icon: Settings,
-      title: "AI Integration & Support",
-      description: "Seamlessly integrate AI solutions into your existing systems with ongoing support and optimisation.",
+      title: "AI Integration & Optimisation",
+      description: "Seamlessly integrate your new AI solutions with your existing software stack (CRM, accounting, legacy systems) and provide ongoing support to ensure peak performance.",
       features: [
-        "System integration",
-        "API development",
-        "Performance optimisation",
-        "24/7 technical support"
+        "System integration and API development",
+        "Ongoing performance monitoring and tuning",
+        "Dedicated technical support and maintenance",
+        "Future-proofing and scaling capabilities"
       ]
     }
   ];
