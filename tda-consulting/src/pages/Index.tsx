@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { NavLink } from "react-router-dom";
-import { ArrowRight, CheckCircle, Sparkles, UserCheck, FileCheck, MessageSquare, DollarSign, Clock, Target } from "lucide-react";
+import { ArrowRight, CheckCircle, Sparkles, UserCheck, FileCheck, MessageSquare, DollarSign, Target } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {

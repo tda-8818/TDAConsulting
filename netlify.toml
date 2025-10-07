@@ -1,0 +1,14 @@
+[build]
+  command = "cd tda-consulting && npm run build"
+  publish = "tda-consulting/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Cache node_modules between builds for faster installs
+[[plugins]]
+  package = "@netlify/plugin-cache"
+
+  [plugins.inputs]
+    paths = ["tda-consulting/node_modules", "tda-consulting/.npm"]
