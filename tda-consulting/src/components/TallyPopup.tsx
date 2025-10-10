@@ -36,9 +36,9 @@ export function TallyPopup({
   }, []);
 
   const openTallyPopup = () => {
-    // @ts-ignore - Tally is loaded via external script
+    // @ts-expect-error - Tally is loaded via external script
     if (window.Tally) {
-      // @ts-ignore
+      // @ts-expect-error - Tally is loaded via external script
       window.Tally.openPopup(formId, {
         layout: "modal",
         width: 700,
