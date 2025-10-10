@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -42,8 +40,6 @@ export default function RootLayout({
           <Navigation />
           {children}
           <Footer />
-          <Toaster />
-          <Sonner />
         </TooltipProvider>
       </body>
     </html>
