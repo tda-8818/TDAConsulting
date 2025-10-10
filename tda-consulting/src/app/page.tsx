@@ -1,11 +1,11 @@
 // src/app/page.tsx
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Sparkles, UserCheck, FileCheck, MessageSquare, DollarSign, Target } from "lucide-react";
+import { TallyPopup } from "@/components/TallyPopup";
 
 export default function Home() {
+  const tallyFormId = "mOOy0k";
   const solutions = [
     {
       title: "Autonomous Lead Qualification Agent",
@@ -100,12 +100,15 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
-                <Button variant="hero" size="lg" className="group">
-                  Quantify Your Savings: Book Discovery Call
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <TallyPopup
+                formId={tallyFormId}
+                buttonVariant="hero"
+                buttonSize="lg"
+                buttonClassName="group"
+              >
+                Quantify Your Savings: Book Discovery Call
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </TallyPopup>
             </div>
           </div>
         </div>
@@ -200,12 +203,15 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/contact">
-              <Button variant="hero" size="lg" className="group">
-                Start with Step 1: Book Your Free Diagnosis
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+            <TallyPopup
+              formId={tallyFormId}
+              buttonVariant="hero"
+              buttonSize="lg"
+              buttonClassName="group"
+            >
+              Start with Step 1: Book Your Free Diagnosis
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </TallyPopup>
           </div>
         </div>
       </section>
@@ -220,16 +226,15 @@ export default function Home() {
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Book your free 15-minute diagnosis and discover exactly how much your agency can save with AI automation.
             </p>
-            <Link href="/contact">
-              <Button 
-                variant="secondary" 
-                size="lg"
-                className="bg-card text-foreground hover:bg-card/90"
-              >
-                Book Your Free Discovery Call
-                <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <TallyPopup
+              formId={tallyFormId}
+              buttonVariant="secondary"
+              buttonSize="lg"
+              buttonClassName="bg-card text-foreground hover:bg-card/90"
+            >
+              Book Your Free Discovery Call
+              <ArrowRight className="ml-2" />
+            </TallyPopup>
           </Card>
         </div>
       </section>

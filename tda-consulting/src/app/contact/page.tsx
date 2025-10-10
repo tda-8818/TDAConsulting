@@ -1,6 +1,7 @@
 // src/app/contact/page.tsx
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, Clock } from "lucide-react";
+import { TallyPopup } from "@/components/TallyPopup";
 
 export const metadata = {
   title: "Contact Us | TDA Consulting",
@@ -8,7 +9,7 @@ export const metadata = {
 };
 
 export default function Contact() {
-  const googleFormUrl = "https://forms.gle/ZdHtUxALkWsMg1zw5";
+  const tallyFormId = "mOOy0k";
 
   return (
     <div className="min-h-screen bg-gradient-hero">
@@ -68,17 +69,18 @@ export default function Contact() {
             </Card>
           </div>
 
-          {/* Google Form Embed */}
-          <Card className="p-8 bg-card border-border">
-            <iframe
-              src={googleFormUrl}
-              width="100%"
-              height="800"
-              className="rounded-lg border-0"
-              title="Contact Form"
-            >
-              Loading…
-            </iframe>
+          {/* Tally Form */}
+          <Card className="p-12 bg-card border-border text-center">
+            <h2 className="text-3xl font-bold mb-4">Book Your Free Discovery Call</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Click below to open our contact form and schedule your free 15-minute AI automation audit.
+            </p>
+            <TallyPopup
+              formId={tallyFormId}
+              buttonText="Open Contact Form"
+              buttonVariant="hero"
+              buttonSize="lg"
+            />
           </Card>
         </div>
       </section>

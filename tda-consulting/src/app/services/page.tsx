@@ -1,16 +1,15 @@
 // src/app/services/page.tsx
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
-import { 
-  ArrowRight, 
+import {
+  ArrowRight,
   Brain,
-  Workflow, 
+  Workflow,
   Bot,
   Globe,
   Settings,
   Code
 } from "lucide-react";
+import { TallyPopup } from "@/components/TallyPopup";
 
 export const metadata = {
   title: "Our Services | TDA Consulting",
@@ -18,6 +17,7 @@ export const metadata = {
 };
 
 export default function Services() {
+  const tallyFormId = "mOOy0k";
   const services = [
     {
       icon: Brain,
@@ -138,16 +138,15 @@ export default function Services() {
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Ready to explore how our AI services can transform your business? Get in touch today.
             </p>
-            <Link href="/contact">
-              <Button 
-                variant="secondary" 
-                size="lg"
-                className="bg-card text-foreground hover:bg-card/90"
-              >
-                Get Started
-                <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <TallyPopup
+              formId={tallyFormId}
+              buttonVariant="secondary"
+              buttonSize="lg"
+              buttonClassName="bg-card text-foreground hover:bg-card/90"
+            >
+              Get Started
+              <ArrowRight className="ml-2" />
+            </TallyPopup>
           </Card>
         </div>
       </section>
