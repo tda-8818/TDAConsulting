@@ -1,8 +1,7 @@
+// src/app/services/page.tsx
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import { 
   ArrowRight, 
   Brain,
@@ -13,14 +12,19 @@ import {
   Code
 } from "lucide-react";
 
-const Services = () => {
+export const metadata = {
+  title: "Our Services | TDA Consulting",
+  description: "Comprehensive AI solutions: strategy, automation, chatbots, websites, custom development, and integration services for Australian businesses.",
+};
+
+export default function Services() {
   const services = [
     {
       icon: Brain,
       title: "AI Strategy & Consulting",
       description: "We start with a disciplined audit to understand your current administrative costs. This ensures your AI investment is directly aligned with business goals and delivers guaranteed financial ROI.",
       features: [
-        "Fixed-Price Automation Audit", // Emphasize the entry point
+        "Fixed-Price Automation Audit",
         "Roadmap development (3/6/12 month)",
         "Identify high-cost, high-volume workflows",
         "ROI analysis and financial planning"
@@ -31,7 +35,7 @@ const Services = () => {
       title: "AI Process Automation",
       description: "Implement AI agents that eliminate manual, repetitive work like data entry, invoice processing, and report generation. We turn staff time spent clicking into recoverable dollars.",
       features: [
-        "AI Document Processing (NLP)", // Covers data extraction
+        "AI Document Processing (NLP)",
         "Intelligent workflow orchestration (Make/Zapier)",
         "Automated data syncing across systems (CRM/ERP)",
         "Reduce human errors and compliance risk"
@@ -44,7 +48,7 @@ const Services = () => {
       features: [
         "AI Customer Service Triage & Resolution",
         "Custom Chatbots and Virtual Assistants",
-        "Voice-to-Text AI Receptionist and Intake", // Addresses your specific goal
+        "Voice-to-Text AI Receptionist and Intake",
         "Multi-channel support integration"
       ]
     },
@@ -60,7 +64,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Code, // New icon for development focus
+      icon: Code,
       title: "Custom Application Development",
       description: "Build custom web portals, internal mobile apps, and dedicated data dashboards that provide simple, centralized access points for your team or customers.",
       features: [
@@ -85,8 +89,6 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <Navigation />
-      
       {/* Header */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center space-y-6">
@@ -94,8 +96,8 @@ const Services = () => {
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive AI solutions tailored to your business needs. From strategy to implementation, 
-            we're with you every step of the way.
+            Comprehensive AI solutions tailored to your business needs. From strategy to implementation,
+            we&apos;re with you every step of the way.
           </p>
         </div>
       </section>
@@ -131,12 +133,12 @@ const Services = () => {
         <div className="container mx-auto">
           <Card className="bg-gradient-primary text-primary-foreground p-12 text-center shadow-glow">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Ready to explore how our AI services can transform your business? Get in touch today.
             </p>
-            <NavLink to="/contact">
+            <Link href="/contact">
               <Button 
                 variant="secondary" 
                 size="lg"
@@ -145,14 +147,10 @@ const Services = () => {
                 Get Started
                 <ArrowRight className="ml-2" />
               </Button>
-            </NavLink>
+            </Link>
           </Card>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-};
-
-export default Services;
+}

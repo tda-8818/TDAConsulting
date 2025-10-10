@@ -1,16 +1,17 @@
+// src/app/contact/page.tsx
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Mail, Phone, Clock } from "lucide-react";
 
-const Contact = () => {
-  // Replace this with your actual Google Form embed URL
+export const metadata = {
+  title: "Contact Us | TDA Consulting",
+  description: "Get in touch with TDA Consulting. Book your free 15-minute AI automation audit. Based in Sydney, Australia.",
+};
+
+export default function Contact() {
   const googleFormUrl = "https://forms.gle/ZdHtUxALkWsMg1zw5";
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <Navigation />
-
       {/* Header */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center space-y-6">
@@ -18,7 +19,7 @@ const Contact = () => {
             Get in <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your business with AI? Let's start a conversation about your goals and how we can help.
+            Ready to transform your business with AI? Let&apos;s start a conversation about your goals and how we can help.
           </p>
         </div>
       </section>
@@ -69,25 +70,18 @@ const Contact = () => {
 
           {/* Google Form Embed */}
           <Card className="p-8 bg-card border-border">
-            {/* Google Form Iframe */}
             <iframe
               src={googleFormUrl}
               width="100%"
               height="800"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="rounded-lg"
+              className="rounded-lg border-0"
+              title="Contact Form"
             >
               Loading…
             </iframe>
           </Card>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-};
-
-export default Contact;
+}

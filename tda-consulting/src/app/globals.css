@@ -6,7 +6,7 @@
 */
 
 @theme {
-  /* Color palette - automatically generates utilities like bg-*, text-*, border-* */
+  /* Color palette */
   --color-background: hsl(220 25% 97%);
   --color-foreground: hsl(225 15% 15%);
   --color-card: hsl(0 0% 100%);

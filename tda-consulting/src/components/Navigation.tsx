@@ -1,10 +1,16 @@
+// src/components/Navigation.tsx
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -18,40 +24,41 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center space-x-2">
-            <img
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
               src="/TDAlogo.png"
               alt="TDA Consulting"
-              className="h-10 w-auto"
+              width={120}
+              height={40}
+              priority
             />
-          </NavLink>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <NavLink
+              <Link
                 key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`
-                }
+                href={link.path}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === link.path
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.name}
-              </NavLink>
+              </Link>
             ))}
-            <NavLink to="/contact">
+            <Link href="/contact">
               <Button variant="hero" size="sm">Get Started</Button>
-            </NavLink>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
@@ -61,24 +68,22 @@ const Navigation = () => {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
             {navLinks.map((link) => (
-              <NavLink
+              <Link
                 key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `block text-sm font-medium transition-colors ${
-                    isActive
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`
-                }
+                href={link.path}
+                className={`block text-sm font-medium transition-colors ${
+                  pathname === link.path
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
-              </NavLink>
+              </Link>
             ))}
-            <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="hero" size="sm" className="w-full">Get Started</Button>
-            </NavLink>
+            </Link>
           </div>
         )}
       </div>

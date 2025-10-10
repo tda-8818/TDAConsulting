@@ -1,9 +1,13 @@
+// src/app/about/page.tsx
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Target, Users, Award, Rocket } from "lucide-react";
 
-const About = () => {
+export const metadata = {
+  title: "About Us | TDA Consulting",
+  description: "Learn about TDA Consulting's mission to help Australian businesses save time through AI automation and digital modernisation.",
+};
+
+export default function About() {
   const values = [
     {
       icon: Target,
@@ -29,8 +33,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <Navigation />
-
       {/* Header */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center space-y-6">
@@ -55,13 +57,13 @@ const About = () => {
                 and scale their digital capabilities in the ever-evolving digital world.
               </p>
               <p>
-                At TDA, we pride ourselves on providing tailored solutions that meet the unique needs of each client. Our team of experts ensures seamless integration, 
-                enhanced productivity, and long-term success for your business by eliminating costly human errors and wasted staff hours. 
-                We don't just implement technology; we focus on real-world outcomes that deliver clear, quantifiable value for your business.
+                At TDA, we pride ourselves on providing tailored solutions that meet the unique needs of each client. Our team of experts ensures seamless integration,
+                enhanced productivity, and long-term success for your business by eliminating costly human errors and wasted staff hours.
+                We don&apos;t just implement technology; we focus on real-world outcomes that deliver clear, quantifiable value for your business.
               </p>
               <p>
-                Whether you’re looking to streamline your internal admin, secure your data, or scale your operations across multiple departments, we’re here to make it happen. 
-                As part of a global network focused on technology and automation, we bring a wealth of experience, innovation, and a strong commitment to excellence to every 
+                Whether you&apos;re looking to streamline your internal admin, secure your data, or scale your operations across multiple departments, we&apos;re here to make it happen.
+                As part of a global network focused on technology and automation, we bring a wealth of experience, innovation, and a strong commitment to excellence to every
                 business we partner with. TDA is committed to helping you thrive and achieve your growth ambitions.
               </p>
             </div>
@@ -127,10 +129,6 @@ const About = () => {
           </Card>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-};
-
-export default About;
+}

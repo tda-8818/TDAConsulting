@@ -1,12 +1,11 @@
+// src/app/page.tsx
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, Sparkles, UserCheck, FileCheck, MessageSquare, DollarSign, Target } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
-const Index = () => {
+export default function Home() {
   const solutions = [
     {
       title: "Autonomous Lead Qualification Agent",
@@ -69,18 +68,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/assets/hero-bg.jpg"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -101,12 +100,12 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <NavLink to="/contact">
+              <Link href="/contact">
                 <Button variant="hero" size="lg" className="group">
                   Quantify Your Savings: Book Discovery Call
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </NavLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -201,12 +200,12 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <NavLink to="/contact">
+            <Link href="/contact">
               <Button variant="hero" size="lg" className="group">
                 Start with Step 1: Book Your Free Diagnosis
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </NavLink>
+            </Link>
           </div>
         </div>
       </section>
@@ -221,7 +220,7 @@ const Index = () => {
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Book your free 15-minute diagnosis and discover exactly how much your agency can save with AI automation.
             </p>
-            <NavLink to="/contact">
+            <Link href="/contact">
               <Button 
                 variant="secondary" 
                 size="lg"
@@ -230,14 +229,10 @@ const Index = () => {
                 Book Your Free Discovery Call
                 <ArrowRight className="ml-2" />
               </Button>
-            </NavLink>
+            </Link>
           </Card>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-};
-
-export default Index;
+}

@@ -1,4 +1,8 @@
-import { NavLink } from "react-router-dom";
+// src/components/Footer.tsx
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -10,15 +14,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <NavLink to="/" className="flex items-center">
-              <img
+            <Link href="/" className="flex items-center">
+              <Image
                 src="/TDAlogo.png"
                 alt="TDA Consulting"
-                className="h-10 w-auto"
+                width={120}
+                height={40}
               />
-            </NavLink>
+            </Link>
             <p className="text-sm text-muted-foreground">
-              Empowering Australian businesses with cutting-edge AI automation solutions.
+              Sydney-based AI automation. We save Australian businesses 15+ hours weekly.
             </p>
           </div>
 
@@ -27,24 +32,24 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <NavLink to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Services
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   About
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Contact
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </div>
